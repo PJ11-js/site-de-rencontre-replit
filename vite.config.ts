@@ -2,13 +2,11 @@ import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 import path from "path";
 
-// Retire les plugins Replit pour la compatibilité Vercel
-// runtimeErrorOverlay et cartographer sont spécifiques à Replit
+// Plugins Replit supprimés pour compatibilité Vercel
 
 export default defineConfig({
   plugins: [
     react(),
-    // Supprimez les plugins Replit pour le déploiement sur Vercel
   ],
   resolve: {
     alias: {
@@ -28,4 +26,4 @@ export default defineConfig({
       deny: ["**/.*"],
     },
   },
-});
+}); 
